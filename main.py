@@ -249,8 +249,24 @@ def remove_smallest(numbers):
 ## Given 2 strings with letters a-z, Return a NEW sorted string (the longest possible) containing UNIQUE letters from s1 OR s2
 
 def longest(a1, a2):
-  long_string = a1+a2
-  print(long_string)
-  return ''.join(sorted(set(long_string)))
+  return ''.join(sorted(set(a1+a2)))
 
-print(longest("loopingisfunbutdangerous", "lessdangerousthancoding"))
+
+# creating a new dictionary
+my_dict ={"Java":100, "Python":112, "C":11}
+ 
+# one-liner
+print("One line Code Key value: ", list(my_dict.keys())[list(my_dict.values()).index(100)])
+
+def is_isogram(string):
+  lower_string = string.lower()
+
+  checked_letters = []
+
+  for letter in lower_string:
+    if letter in checked_letters:
+      return False
+    checked_letters.append(letter)
+
+  return True
+
